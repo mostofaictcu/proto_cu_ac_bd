@@ -158,7 +158,7 @@ $currentYear = date('Y');
     <!-- Footer -->
     <footer class="w-full border-t border-slate-800/80 py-8 bg-slate-950/80 backdrop-blur-xl text-slate-400 text-sm">
         <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p class="text-slate-400">&copy; <?= $currentYear ?> Chittagong University. All rights reserved.</p>
+            <p class="text-slate-400">&copy; <?= $currentYear ?> University Of Chittagong. All rights reserved.</p>
             <div class="flex items-center gap-3 text-xs text-slate-400 bg-slate-900/80 px-4 py-2 rounded-xl border border-slate-800">
                 <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                 <span>Powered by ICT Cell</span>

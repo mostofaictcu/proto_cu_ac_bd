@@ -1,6 +1,6 @@
 <?php
 $siteTitle = getenv('SITE_TITLE') ?: 'Prototypes of Chittagong university applications';
-$siteSubtitle = getenv('SITE_SUBTITLE') ?: 'Explore official prototype applications, portals, and digital systems developed for Chittagong University.';
+$siteSubtitle = getenv('SITE_SUBTITLE') ?: 'Explore official prototype applications, portals, and digital systems developed for University Of Chittagong.';
 
 $apps = [];
 
@@ -31,7 +31,7 @@ if (empty($apps)) {
 // 3. Fallback to primary app variables (APP_URL, APP_TITLE, APP_LOGO)
 if (empty($apps)) {
     $appUrl = getenv('APP_URL') ?: getenv('APP_LINK') ?: 'https://cu.ac.bd';
-    $appTitle = getenv('APP_TITLE') ?: 'Chittagong University Portal';
+    $appTitle = getenv('APP_TITLE') ?: 'University Of Chittagong Portal';
     $appLogo = getenv('APP_LOGO') ?: 'https://cu.ac.bd/wp-content/uploads/2024/03/university-of-chittagong-seeklogo.com-removebg-preview-removebg-preview-1-60x81.png';
 
     if (!empty($appUrl)) {
@@ -90,7 +90,7 @@ $currentYear = date('Y');
 
             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium mb-6 shadow-lg shadow-emerald-950/50">
                 <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                Chittagong University ICT Cell
+                University Of Chittagong - ICT Cell
             </div>
             
             <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-6 max-w-4xl leading-tight">

@@ -1,0 +1,33 @@
+services:
+  landing-page:
+    build: .
+    container_name: cu-prototypes-landing
+    restart: unless-stopped
+    ports:
+      - "3005:80"
+    volumes:
+      - ./index.php:/var/www/html/index.php
+      - ./logo.svg:/var/www/html/logo.svg
+    environment:
+      - SITE_TITLE=${SITE_TITLE}
+      - SITE_SUBTITLE=${SITE_SUBTITLE}
+      - APPS_JSON=${APPS_JSON}
+      - APP_1_URL=${APP_1_URL}
+      - APP_1_TITLE=${APP_1_TITLE}
+      - APP_1_LOGO=${APP_1_LOGO}
+      - APP_2_URL=${APP_2_URL}
+      - APP_2_TITLE=${APP_2_TITLE}
+      - APP_2_LOGO=${APP_2_LOGO}
+    networks:
+      - proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.landing.rule=Host(`proto.cu.ac.bd`)"
+      - "traefik.http.routers.landing.entrypoints=websecure"
+      - "traefik.http.routers.landing.tls=true"
+      - "traefik.http.routers.landing.tls.certresolver=letsencrypt"
+      - "traefik.http.services.landing.loadbalancer.server.port=80"
+
+networks:
+  proxy:
+    external: true
